@@ -9,9 +9,11 @@ import theme from "./theme";
 
 function Index() {
   return (
-    <ThemeProvider theme={theme}>
-      <DetailsPage />
-    </ThemeProvider>
+    <>
+      <ThemeProvider theme={theme}>
+        <DetailsPage />
+      </ThemeProvider>
+    </>
   );
 }
 
