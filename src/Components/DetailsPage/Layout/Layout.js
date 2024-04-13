@@ -3,7 +3,6 @@ import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import CssBaseline from "@mui/material/CssBaseline";
-import MuiAppBar from "@mui/material/AppBar";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
@@ -36,25 +35,6 @@ const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
     }),
   })
 );
-
-// #12262f
-
-// const AppBar = styled(MuiAppBar, {
-//   shouldForwardProp: (prop) => prop !== "open",
-// })(({ theme, open }) => ({
-//   transition: theme.transitions.create(["margin", "width"], {
-//     easing: theme.transitions.easing.sharp,
-//     duration: theme.transitions.duration.leavingScreen,
-//   }),
-//   ...(open && {
-//     width: `calc(100% - ${drawerWidth}px)`,
-//     marginLeft: `${drawerWidth}px`,
-//     transition: theme.transitions.create(["margin", "width"], {
-//       easing: theme.transitions.easing.easeOut,
-//       duration: theme.transitions.duration.enteringScreen,
-//     }),
-//   }),
-// }));
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
@@ -135,8 +115,8 @@ export default function Layout() {
           open={open}
         >
           <DrawerHeader>
+            <p>STACK SAMPLE</p>
             <IconButton onClick={handleDrawerClose}>
-              <p>STACK SAMPLE</p>
               {theme.direction === "ltr" ? (
                 <ChevronLeftIcon />
               ) : (
@@ -148,7 +128,6 @@ export default function Layout() {
           <Divider />
         </Drawer>
         <Main open={open}>
-          {/* <DrawerHeader /> */}
           <HeroComponent />
         </Main>
       </Box>
