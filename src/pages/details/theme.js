@@ -12,7 +12,7 @@ const theme = createTheme({
     },
     // Add custom colors as needed
     customColor: {
-      main: "#4caf50", // Example of a custom color
+      main: "#000", // Example of a custom color
     },
   },
 });
