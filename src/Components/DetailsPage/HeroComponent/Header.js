@@ -5,11 +5,26 @@ import EmojiFlagsIcon from "@mui/icons-material/EmojiFlags";
 import FilePresentOutlinedIcon from "@mui/icons-material/FilePresentOutlined";
 import Switch from "@mui/material/Switch";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
+import Box from "@mui/material/Box";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 
 function Header() {
+  const [age, setAge] = React.useState("");
+
+  const handleChange = (event) => {
+    setAge(event.target.value);
+  };
+
   return (
     <div className="text-white flex flex-col gap-2 w-full ">
-      <div id="upper_nav" className="flex items-end justify-start gap-40">
+      <div
+        id="upper_nav"
+        className="flex items-end justify-start gap-40 bg-[#082f41] py-4 px-5 "
+      >
         <div className="flex items-center justify-start gap-4">
           <span>
             <WarningAmberIcon
@@ -30,15 +45,15 @@ function Header() {
 
         <div
           id="forecast_div"
-          className="flex items-center justify-start gap-4 px-4 py-2 bg-blue-400 rounded-lg"
+          className="flex items-center justify-start gap-4 px-4 py-2 bg-[#2284fd3d] rounded-lg"
         >
           <div className="flex flex-col gap-2 items-center">
-            <p>FORECAST</p>
-            <h6 className="text-bold">89%</h6>
+            <p className="text-slate-300">FORECAST</p>
+            <h6 className="font-bold">89%</h6>
           </div>
           <div className="flex flex-col gap-2 items-center">
-            <p>FORECAST</p>
-            <h6 className="text-bold">80%</h6>
+            <p className="text-slate-300">FORECAST</p>
+            <h6 className="font-bold">80%</h6>
           </div>
           <div></div>
         </div>
@@ -48,17 +63,50 @@ function Header() {
         </span>
       </div>
 
-      <div id="lower_nav" className="flex items-end justify-start gap-4">
-        <span>
+      <div
+        id="mid_nav"
+        className="flex items-end justify-start gap-4 bg-[#082f41] pt-4 px-5"
+      >
+        <span className="pb-3">
           <FilePresentOutlinedIcon />
         </span>
 
-        <p>SPECIAL REQUIREMENTS</p>
+        <p className="pb-3">SPECIAL REQUIREMENTS</p>
 
-        <Switch />
-        <p className="text-sm">INCLUDE</p>
+        <div className="flex items-center justify-center pb-1">
+          <Switch />
+        </div>
 
-        <KeyboardArrowDownOutlinedIcon />
+        <p className="text-sm pb-3">INCLUDE</p>
+
+        <div className="flex items-center justify-center pb-3">
+          <KeyboardArrowDownOutlinedIcon />
+        </div>
+      </div>
+
+      <div className="lower_nav">
+        <div>
+          <p>Forecast Horizon</p>
+        </div>
+
+        <div>
+          <Box sx={{ minWidth: 120 }}>
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-select-label">Age</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={age}
+                label="Age"
+                onChange={handleChange}
+              >
+                <MenuItem value={10}>Ten</MenuItem>
+                <MenuItem value={20}>Twenty</MenuItem>
+                <MenuItem value={30}>Thirty</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
+        </div>
       </div>
     </div>
   );

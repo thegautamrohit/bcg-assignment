@@ -14,6 +14,9 @@ const theme = createTheme({
     customColor: {
       main: "#000", // Example of a custom color
     },
+    bgColor: {
+      main: "#020a12",
+    },
   },
 });
 

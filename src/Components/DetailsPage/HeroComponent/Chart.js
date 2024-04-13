@@ -61,7 +61,7 @@ export const data = {
 
 const ChartComponent = () => {
   return (
-    <div className="border border-white max-h-[65vh]">
+    <div className="max-h-[65vh]">
       <Line options={options} data={data} />
     </div>
   );

@@ -5,7 +5,7 @@ function DetailsPage() {
   return (
     <div
       style={{
-        background: "#193745",
+        background: "#020a12",
       }}
     >
       <Layout />

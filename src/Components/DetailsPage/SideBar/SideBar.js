@@ -50,7 +50,7 @@ export default function SideBar() {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ width: "100%", backgroundColor: "#082f41" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           value={value}
@@ -63,9 +63,7 @@ export default function SideBar() {
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        <List
-          sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
-        >
+        <List sx={{ width: "100%", maxWidth: 360 }}>
           {[1, 2, 3]?.map((item, index) => (
             <MonoList key={index} />
           ))}

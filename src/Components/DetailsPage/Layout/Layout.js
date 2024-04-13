@@ -59,7 +59,7 @@ export default function Layout() {
 
   return (
     <>
-      <AppBar position="static" color="customColor">
+      <AppBar position="static" color="bgColor">
         <Toolbar>
           <IconButton
             size="large"
@@ -127,7 +127,12 @@ export default function Layout() {
           <SideBar />
           <Divider />
         </Drawer>
-        <Main open={open}>
+        <Main
+          open={open}
+          style={{
+            padding: 0,
+          }}
+        >
           <HeroComponent />
         </Main>
       </Box>
