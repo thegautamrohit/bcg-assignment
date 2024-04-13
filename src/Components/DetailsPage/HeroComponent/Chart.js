@@ -7,7 +7,7 @@ import {
   LineElement,
   Title,
   Tooltip,
-  Legend,
+  //   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 
@@ -17,16 +17,15 @@ ChartJS.register(
   PointElement,
   LineElement,
   Title,
-  Tooltip,
-  Legend
+  Tooltip
 );
 
 export const options = {
   responsive: true,
   plugins: {
-    legend: {
-      position: "top",
-    },
+    // legend: {
+    //   position: "top",
+    // },
     title: {
       display: true,
       text: "",
@@ -62,7 +61,7 @@ export const data = {
 
 const ChartComponent = () => {
   return (
-    <div>
+    <div className="border border-white max-h-[65vh]">
       <Line options={options} data={data} />
     </div>
   );
