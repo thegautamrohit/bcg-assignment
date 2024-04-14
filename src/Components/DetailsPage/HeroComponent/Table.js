@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import {
   TableContainer,
   Table,
@@ -9,53 +9,79 @@ import {
   TableBody,
 } from "@mui/material";
 
-const data = [
-  { name: "John Doe", age: 30, city: "New York" },
-  { name: "Jane Doe", age: 25, city: "Los Angeles" },
-];
-
 const styles = {
-  tableContainer: {
-    maxHeight: 400,
-  },
   tableCell: {
     width: 150,
-    padding: "0 16px",
-  },
-  headerRow: {
-    position: "sticky",
-    top: 0,
-    backgroundColor: "#f5f5f5",
-    whiteSpace: "nowrap",
-  },
-  rotate: {
-    transform: "rotate(-90deg)",
-    transformOrigin: "0 0",
+    padding: "16px",
+    color: "#fff",
+    fontWeight: "semibold",
   },
 };
 
-function TableComponent() {
+function TableComponent({ sanitisedData }) {
   return (
-    <TableContainer component={Paper} sx={styles.tableContainer}>
-      <Table stickyHeader>
-        <TableHead>
-          <TableRow sx={styles.headerRow}>
-            <TableCell sx={[styles.tableCell, styles.rotate]}>Name</TableCell>
-            <TableCell sx={styles.tableCell}>Age</TableCell>
-            <TableCell sx={styles.tableCell}>City</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {data.map((row) => (
-            <TableRow key={row.name}>
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell>{row.age}</TableCell>
-              <TableCell>{row.city}</TableCell>
+    <TableContainer
+      component={Paper}
+      sx={{
+        backgroundColor: "#082f41",
+      }}
+    >
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableHead></TableHead>
+        {sanitisedData?.aiForecast && (
+          <TableBody>
+            <TableRow>
+              <TableCell sx={styles.tableCell}>AI Forecast</TableCell>
+              {sanitisedData?.aiForecastHistoric.map((item, index) => (
+                <TableCell sx={styles.tableCell} key={index}>
+                  {item}
+                </TableCell>
+              ))}
             </TableRow>
-          ))}
-        </TableBody>
+            <TableRow>
+              <TableCell sx={styles.tableCell}>Final Forecast</TableCell>
+              {sanitisedData?.finalForecastHistoric.map((item, index) => (
+                <TableCell sx={styles.tableCell} key={index}>
+                  {item}
+                </TableCell>
+              ))}
+            </TableRow>
+            <TableRow>
+              <TableCell sx={styles.tableCell}>Final Consumption</TableCell>
+              {sanitisedData.finalConsumption.map((item, index) => (
+                <TableCell sx={styles.tableCell} key={index}>
+                  {item}
+                </TableCell>
+              ))}
+            </TableRow>
+            <TableRow>
+              <TableCell sx={styles.tableCell}>Ai Forecast</TableCell>
+              {sanitisedData.aiForecast.map((item, index) => (
+                <TableCell sx={styles.tableCell} key={index}>
+                  {item}
+                </TableCell>
+              ))}
+            </TableRow>
+            <TableRow>
+              <TableCell sx={styles.tableCell}>Final Forecast</TableCell>
+              {sanitisedData.aiForecast.map((item, index) => (
+                <TableCell sx={styles.tableCell} key={index}>
+                  {item}
+                </TableCell>
+              ))}
+            </TableRow>
+            <TableRow>
+              <TableCell sx={styles.tableCell}>
+                Previous Year Consumption
+              </TableCell>
+              {sanitisedData.finalConsumptionPrevious.map((item, index) => (
+                <TableCell sx={styles.tableCell} key={index}>
+                  {item}
+                </TableCell>
+              ))}
+            </TableRow>
+          </TableBody>
+        )}
       </Table>
     </TableContainer>
   );

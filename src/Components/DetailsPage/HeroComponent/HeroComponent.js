@@ -1,22 +1,45 @@
-import React from "react";
-import Box from "@mui/material/Box";
+import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import ChartComponent from "./Chart";
 import Table from "./Table";
 
 function HeroComponent({ selectedStack }) {
-  const headers = ["Header 1", "Header 2", "Header 3"];
-  const rows = [
-    ["Row 1 Cell 1", "Row 1 Cell 2", "Row 1 Cell 3"],
-    ["Row 2 Cell 1", "Row 2 Cell 2", "Row 2 Cell 3"],
-    ["Row 3 Cell 1", "Row 3 Cell 2", "Row 3 Cell 3"],
-  ];
+  const [sanitisedData, setSanitisedData] = useState({});
+
+  useEffect(() => {
+    const { quaterWiseData } = selectedStack;
+
+    const result = {
+      aiForecastHistoric: [],
+      finalForecastHistoric: [],
+      finalConsumption: [],
+      aiForecast: [],
+      finalForecast: [],
+      finalConsumptionPrevious: [],
+    };
+
+    for (const year in quaterWiseData) {
+      const quartersData = quaterWiseData[year];
+
+      // Iterate through each quarter's data
+      quartersData.forEach((quarter) => {
+        result.aiForecastHistoric.push(quarter.aiForecast_historic);
+        result.finalForecastHistoric.push(quarter.finalForecast_historic);
+        result.finalConsumption.push(quarter.finalConsumption);
+        result.aiForecast.push(quarter.aiForecast);
+        result.finalForecast.push(quarter.finalForecast);
+        result.finalConsumptionPrevious.push(quarter.finalConsumption_previous);
+      });
+    }
+
+    setSanitisedData(result);
+  }, [selectedStack]);
 
   return (
     <div>
       <Header />
-      <ChartComponent selectedStack={selectedStack} />
-      <Table headers={headers} rows={rows} />
+      <ChartComponent sanitisedData={sanitisedData} />
+      <Table sanitisedData={sanitisedData} />
     </div>
   );
 }
