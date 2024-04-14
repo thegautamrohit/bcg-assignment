@@ -14,6 +14,9 @@ import Toolbar from "@mui/material/Toolbar";
 import MenuIcon from "@mui/icons-material/Menu";
 import Typography from "@mui/material/Typography";
 import AccountCircle from "@mui/icons-material/AccountCircle";
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+import { useRouter } from "next/router";
+import CloseIcon from "@mui/icons-material/Close";
 
 const drawerWidth = 420;
 
@@ -48,6 +51,8 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 export default function Layout() {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
+
+  const router = useRouter();
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -117,15 +122,29 @@ export default function Layout() {
           <DrawerHeader
             style={{
               backgroundColor: "#082f41",
+              color: "#fff",
+              justifyContent: "space-between",
+              gap: 20,
             }}
           >
-            <p>STACK SAMPLE</p>
+            <div className="flex items-center justify-start gap-4">
+              <IconButton onClick={handleDrawerClose}>
+                <KeyboardBackspaceIcon
+                  onClick={() => router.back()}
+                  className="cursor-pointer"
+                  sx={{
+                    color: "#fff",
+                  }}
+                />
+              </IconButton>
+              <h2 className="text-2xl font-semibold text-left">STACK SAMPLE</h2>
+            </div>
             <IconButton onClick={handleDrawerClose}>
-              {theme.direction === "ltr" ? (
-                <ChevronLeftIcon />
-              ) : (
-                <ChevronRightIcon />
-              )}
+              <CloseIcon
+                sx={{
+                  color: "#fff",
+                }}
+              />
             </IconButton>
           </DrawerHeader>
           <SideBar />
