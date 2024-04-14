@@ -35,6 +35,16 @@ export const options = {
     intersect: true,
   },
   scales: {
+    y: {
+      title: {
+        display: true,
+        text: "CONSUMPTION",
+      },
+      gridLines: {
+        color: "#fff",
+        display: true,
+      },
+    },
     xAxes: [
       {
         display: true,
@@ -44,19 +54,6 @@ export const options = {
         scaleLabel: {
           display: true,
           labelString: "Quarter",
-        },
-      },
-    ],
-    yAxes: [
-      {
-        display: true,
-        gridLines: {
-          display: true,
-          color: "#fff",
-        },
-        scaleLabel: {
-          display: true,
-          labelString: "Consumption",
         },
       },
     ],
@@ -133,7 +130,7 @@ const ChartComponent = ({ sanitisedData }) => {
   };
 
   return (
-    <div className="max-h-[65vh]">
+    <div className="max-h-[56vh] ml-6 w-max">
       {sanitisedData?.aiForecastHistoric && (
         <Line options={options} data={data} />
       )}
