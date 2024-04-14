@@ -50,7 +50,7 @@ export default function SideBar() {
   };
 
   return (
-    <Box sx={{ width: "100%", backgroundColor: "#082f41" }}>
+    <Box sx={{ width: "100%", backgroundColor: "#082f41", height: "100%" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           value={value}
