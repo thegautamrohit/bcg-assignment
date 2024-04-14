@@ -7,519 +7,181 @@ export const CityStackData = [
     stackType: "backlog",
     displayName: "General Stack 1",
     quaterWiseData: {
-      historical: {
-        year: {
-          2022: [
-            // will have quaters number in indexed
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000), // Consumption
-              aiPrediction: getRandomConsumptionValue(300000, 900000), // AI forecast
-              finalForecast: getRandomConsumptionValue(300000, 900000), //yellow line
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-          ],
-          2023: [
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-          ],
+      2022: [
+        // will have quaters number as indexed
+        {
+          aiForecast_historic: getRandomConsumptionValue(300000, 900000),
+          finalForecast_historic: getRandomConsumptionValue(300000, 900000),
+          finalConsumption: getRandomConsumptionValue(300000, 900000),
+          aiForecast: getRandomConsumptionValue(null, null),
+          finalForecast: getRandomConsumptionValue(null, null),
+          finalConsumption_previous: getRandomConsumptionValue(null, null),
         },
-      },
-      forcasted: {
-        year: {
-          2024: [
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-          ],
-          2025: [
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-          ],
+        {
+          aiForecast_historic: getRandomConsumptionValue(300000, 900000),
+          finalForecast_historic: getRandomConsumptionValue(300000, 900000),
+          finalConsumption: getRandomConsumptionValue(300000, 900000),
+          aiForecast: getRandomConsumptionValue(null, null),
+          finalForecast: getRandomConsumptionValue(null, null),
+          finalConsumption_previous: getRandomConsumptionValue(null, null),
         },
-      },
-    },
-  },
-  {
-    stackId: uuid(),
-    stackType: "backlog",
-    displayName: "General Stack 2",
-    quaterWiseData: {
-      historical: {
-        year: {
-          2022: [
-            // will have quaters number in indexed
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000), // Consumption
-              aiPrediction: getRandomConsumptionValue(300000, 900000), // AI forecast
-              finalForecast: getRandomConsumptionValue(300000, 900000), //yellow line
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-          ],
-          2023: [
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-          ],
+        {
+          aiForecast_historic: getRandomConsumptionValue(300000, 900000),
+          finalForecast_historic: getRandomConsumptionValue(300000, 900000),
+          finalConsumption: getRandomConsumptionValue(300000, 900000),
+          aiForecast: getRandomConsumptionValue(null, null),
+          finalForecast: getRandomConsumptionValue(null, null),
+          finalConsumption_previous: getRandomConsumptionValue(null, null),
         },
-      },
-      forcasted: {
-        year: {
-          2024: [
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-          ],
-          2025: [
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-          ],
+        {
+          aiForecast_historic: getRandomConsumptionValue(300000, 900000),
+          finalForecast_historic: getRandomConsumptionValue(300000, 900000),
+          finalConsumption: getRandomConsumptionValue(300000, 900000),
+          aiForecast: getRandomConsumptionValue(null, null),
+          finalForecast: getRandomConsumptionValue(null, null),
+          finalConsumption_previous: getRandomConsumptionValue(null, null),
         },
-      },
-    },
-  },
-  {
-    stackId: uuid(),
-    stackType: "backlog",
-    displayName: "General Stack 3",
-    quaterWiseData: {
-      historical: {
-        year: {
-          2022: [
-            // will have quaters number in indexed
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000), // Consumption
-              aiPrediction: getRandomConsumptionValue(300000, 900000), // AI forecast
-              finalForecast: getRandomConsumptionValue(300000, 900000), //yellow line
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-          ],
-          2023: [
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-          ],
+      ],
+      2023: [
+        // will have quaters number as indexed
+        {
+          aiForecast_historic: getRandomConsumptionValue(300000, 900000),
+          finalForecast_historic: getRandomConsumptionValue(300000, 900000),
+          finalConsumption: getRandomConsumptionValue(300000, 900000),
+          aiForecast: getRandomConsumptionValue(null, null),
+          finalForecast: getRandomConsumptionValue(null, null),
+          finalConsumption_previous: getRandomConsumptionValue(null, null),
         },
-      },
-      forcasted: {
-        year: {
-          2024: [
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-          ],
-          2025: [
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-          ],
+        {
+          aiForecast_historic: getRandomConsumptionValue(300000, 900000),
+          finalForecast_historic: getRandomConsumptionValue(300000, 900000),
+          finalConsumption: getRandomConsumptionValue(300000, 900000),
+          aiForecast: getRandomConsumptionValue(null, null),
+          finalForecast: getRandomConsumptionValue(null, null),
+          finalConsumption_previous: getRandomConsumptionValue(null, null),
         },
-      },
-    },
-  },
-  {
-    stackId: uuid(),
-    stackType: "backlog",
-    displayName: "General Stack 4",
-    quaterWiseData: {
-      historical: {
-        year: {
-          2022: [
-            // will have quaters number in indexed
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000), // Consumption
-              aiPrediction: getRandomConsumptionValue(300000, 900000), // AI forecast
-              finalForecast: getRandomConsumptionValue(300000, 900000), //yellow line
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-          ],
-          2023: [
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-          ],
+        {
+          aiForecast_historic: getRandomConsumptionValue(300000, 900000),
+          finalForecast_historic: getRandomConsumptionValue(300000, 900000),
+          finalConsumption: getRandomConsumptionValue(300000, 900000),
+          aiForecast: getRandomConsumptionValue(null, null),
+          finalForecast: getRandomConsumptionValue(null, null),
+          finalConsumption_previous: getRandomConsumptionValue(null, null),
         },
-      },
-      forcasted: {
-        year: {
-          2024: [
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-          ],
-          2025: [
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-          ],
+        {
+          aiForecast_historic: getRandomConsumptionValue(300000, 900000),
+          finalForecast_historic: getRandomConsumptionValue(300000, 900000),
+          finalConsumption: getRandomConsumptionValue(300000, 900000),
+          aiForecast: getRandomConsumptionValue(null, null),
+          finalForecast: getRandomConsumptionValue(null, null),
+          finalConsumption_previous: getRandomConsumptionValue(null, null),
         },
-      },
-    },
-  },
-  {
-    stackId: uuid(),
-    stackType: "backlog",
-    displayName: "General Stack 5",
-    quaterWiseData: {
-      historical: {
-        year: {
-          2022: [
-            // will have quaters number in indexed
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000), // Consumption
-              aiPrediction: getRandomConsumptionValue(300000, 900000), // AI forecast
-              finalForecast: getRandomConsumptionValue(300000, 900000), //yellow line
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-          ],
-          2023: [
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-          ],
+      ],
+      2024: [
+        // will have quaters number as indexed
+        {
+          aiForecast_historic: getRandomConsumptionValue(300000, 900000),
+          finalForecast_historic: getRandomConsumptionValue(300000, 900000),
+          finalConsumption: getRandomConsumptionValue(300000, 900000),
+          aiForecast: getRandomConsumptionValue(null, null),
+          finalForecast: getRandomConsumptionValue(null, null),
+          finalConsumption_previous: getRandomConsumptionValue(null, null),
         },
-      },
-      forcasted: {
-        year: {
-          2024: [
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-          ],
-          2025: [
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-            {
-              finalConsumption: getRandomConsumptionValue(300000, 900000),
-              aiPrediction: getRandomConsumptionValue(300000, 900000),
-              finalForecast: getRandomConsumptionValue(300000, 900000),
-            },
-          ],
+        {
+          aiForecast_historic: getRandomConsumptionValue(300000, 900000),
+          finalForecast_historic: getRandomConsumptionValue(300000, 900000),
+          finalConsumption: getRandomConsumptionValue(300000, 900000),
+          aiForecast: getRandomConsumptionValue(null, null),
+          finalForecast: getRandomConsumptionValue(null, null),
+          finalConsumption_previous: getRandomConsumptionValue(null, null),
         },
-      },
+        {
+          aiForecast_historic: getRandomConsumptionValue(null, null),
+          finalForecast_historic: getRandomConsumptionValue(null, null),
+          finalConsumption: getRandomConsumptionValue(null, null),
+          aiForecast: getRandomConsumptionValue(300000, 900000),
+          finalForecast: getRandomConsumptionValue(300000, 900000),
+          finalConsumption_previous: getRandomConsumptionValue(300000, 900000),
+        },
+        {
+          aiForecast_historic: getRandomConsumptionValue(null, null),
+          finalForecast_historic: getRandomConsumptionValue(null, null),
+          finalConsumption: getRandomConsumptionValue(null, null),
+          aiForecast: getRandomConsumptionValue(300000, 900000),
+          finalForecast: getRandomConsumptionValue(300000, 900000),
+          finalConsumption_previous: getRandomConsumptionValue(300000, 900000),
+        },
+      ],
+      2025: [
+        // will have quaters number as indexed
+        {
+          aiForecast_historic: getRandomConsumptionValue(null, null),
+          finalForecast_historic: getRandomConsumptionValue(null, null),
+          finalConsumption: getRandomConsumptionValue(null, null),
+          aiForecast: getRandomConsumptionValue(300000, 900000),
+          finalForecast: getRandomConsumptionValue(300000, 900000),
+          finalConsumption_previous: getRandomConsumptionValue(300000, 900000),
+        },
+        {
+          aiForecast_historic: getRandomConsumptionValue(null, null),
+          finalForecast_historic: getRandomConsumptionValue(null, null),
+          finalConsumption: getRandomConsumptionValue(null, null),
+          aiForecast: getRandomConsumptionValue(300000, 900000),
+          finalForecast: getRandomConsumptionValue(300000, 900000),
+          finalConsumption_previous: getRandomConsumptionValue(300000, 900000),
+        },
+        {
+          aiForecast_historic: getRandomConsumptionValue(null, null),
+          finalForecast_historic: getRandomConsumptionValue(null, null),
+          finalConsumption: getRandomConsumptionValue(null, null),
+          aiForecast: getRandomConsumptionValue(300000, 900000),
+          finalForecast: getRandomConsumptionValue(300000, 900000),
+          finalConsumption_previous: getRandomConsumptionValue(300000, 900000),
+        },
+        {
+          aiForecast_historic: getRandomConsumptionValue(null, null),
+          finalForecast_historic: getRandomConsumptionValue(null, null),
+          finalConsumption: getRandomConsumptionValue(null, null),
+          aiForecast: getRandomConsumptionValue(300000, 900000),
+          finalForecast: getRandomConsumptionValue(300000, 900000),
+          finalConsumption_previous: getRandomConsumptionValue(300000, 900000),
+        },
+      ],
+      2026: [
+        // will have quaters number as indexed
+        {
+          aiForecast_historic: getRandomConsumptionValue(null, null),
+          finalForecast_historic: getRandomConsumptionValue(null, null),
+          finalConsumption: getRandomConsumptionValue(null, null),
+          aiForecast: getRandomConsumptionValue(300000, 900000),
+          finalForecast: getRandomConsumptionValue(300000, 900000),
+          finalConsumption_previous: getRandomConsumptionValue(300000, 900000),
+        },
+        {
+          aiForecast_historic: getRandomConsumptionValue(null, null),
+          finalForecast_historic: getRandomConsumptionValue(null, null),
+          finalConsumption: getRandomConsumptionValue(null, null),
+          aiForecast: getRandomConsumptionValue(300000, 900000),
+          finalForecast: getRandomConsumptionValue(300000, 900000),
+          finalConsumption_previous: getRandomConsumptionValue(300000, 900000),
+        },
+        {
+          aiForecast_historic: getRandomConsumptionValue(null, null),
+          finalForecast_historic: getRandomConsumptionValue(null, null),
+          finalConsumption: getRandomConsumptionValue(null, null),
+          aiForecast: getRandomConsumptionValue(300000, 900000),
+          finalForecast: getRandomConsumptionValue(300000, 900000),
+          finalConsumption_previous: getRandomConsumptionValue(300000, 900000),
+        },
+        {
+          aiForecast_historic: getRandomConsumptionValue(null, null),
+          finalForecast_historic: getRandomConsumptionValue(null, null),
+          finalConsumption: getRandomConsumptionValue(null, null),
+          aiForecast: getRandomConsumptionValue(300000, 900000),
+          finalForecast: getRandomConsumptionValue(300000, 900000),
+          finalConsumption_previous: getRandomConsumptionValue(300000, 900000),
+        },
+      ],
     },
   },
 ];

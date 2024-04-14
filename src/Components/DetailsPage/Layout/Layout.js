@@ -17,6 +17,7 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { useRouter } from "next/router";
 import CloseIcon from "@mui/icons-material/Close";
+import { CityStackData } from "../../../../CityStackData";
 
 const drawerWidth = 420;
 
@@ -51,6 +52,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 export default function Layout() {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
+  const [selectedStack, setSelectedStack] = useState(CityStackData[0]);
 
   const router = useRouter();
 
@@ -156,7 +158,7 @@ export default function Layout() {
             padding: 0,
           }}
         >
-          <HeroComponent />
+          <HeroComponent selectedStack={selectedStack} />
         </Main>
       </Box>
     </>

@@ -5,8 +5,10 @@ export const randomArray = (min, max, n = 1) =>
   );
 
 export const getRandomConsumptionValue = (min, max) => {
-  const randomDecimal = Math.random();
+  if (min && max) {
+    const randomDecimal = Math.random();
 
-  const randomValue = randomDecimal * (max - min) + min;
-  return Math.floor(randomValue);
+    const randomValue = randomDecimal * (max - min) + min;
+    return Math.floor(randomValue);
+  } else return null;
 };

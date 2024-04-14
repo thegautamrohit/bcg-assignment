@@ -146,7 +146,6 @@ export default function SideBar() {
 }
 
 function MonoList({ data }) {
-  console.log(data);
   return (
     <ListItem sx={{ width: "100%", padding: 0 }}>
       <div className="flex flex-col justify-center gap-1 border-b border-white pb-6 pt-2 cursor-pointer">
