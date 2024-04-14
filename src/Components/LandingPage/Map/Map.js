@@ -13,12 +13,27 @@ L.Icon.Default.mergeOptions({
   shadowUrl: markerShadow.src,
 });
 
-const Map = ({ cities, onCityClick }) => {
-  const mapRef = useRef(null);
+const cities = [
+  {
+    id: 1,
+    name: "New Delhi",
+    lat: 28.7041,
+    lng: 77.1025,
+    population: 32941000,
+    country: "India",
+  },
+  {
+    id: 2,
+    name: "Mumbai",
+    lat: 19.076,
+    lng: 72.8777,
+    population: 21673149,
+    country: "India",
+  },
+];
 
-  const handleCityClick = (city) => {
-    onCityClick(city);
-  };
+const Map = () => {
+  const mapRef = useRef(null);
 
   return (
     <div className="m-h-[90vh]">
@@ -37,7 +52,13 @@ const Map = ({ cities, onCityClick }) => {
             // onClick={() => handleCityClick(city)}
             // icon={icon}
           >
-            <Tooltip>{city.name}</Tooltip>
+            <Tooltip>
+              <div>
+                <p>City: {city?.name}</p>
+                <p>Population: {city?.population}</p>
+                <p>Country: {city?.country}</p>
+              </div>
+            </Tooltip>
           </Marker>
         ))}
       </MapContainer>
