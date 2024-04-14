@@ -23,14 +23,43 @@ ChartJS.register(
 
 export const options = {
   responsive: true,
-  plugins: {
-    legend: {
-      position: "top",
-    },
-    title: {
-      display: true,
-      text: "",
-    },
+  title: {
+    display: true,
+    text: "",
+  },
+  tooltips: {
+    mode: "label",
+  },
+  hover: {
+    mode: "nearest",
+    intersect: true,
+  },
+  scales: {
+    xAxes: [
+      {
+        display: true,
+        gridLines: {
+          display: false,
+        },
+        scaleLabel: {
+          display: true,
+          labelString: "Quarter",
+        },
+      },
+    ],
+    yAxes: [
+      {
+        display: true,
+        gridLines: {
+          display: true,
+          color: "#fff",
+        },
+        scaleLabel: {
+          display: true,
+          labelString: "Consumption",
+        },
+      },
+    ],
   },
 };
 

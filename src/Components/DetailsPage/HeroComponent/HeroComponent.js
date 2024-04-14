@@ -37,7 +37,7 @@ function HeroComponent({ selectedStack }) {
 
   return (
     <div>
-      <Header />
+      <Header selectedStack={selectedStack} />
       <ChartComponent sanitisedData={sanitisedData} />
       <Table sanitisedData={sanitisedData} />
     </div>

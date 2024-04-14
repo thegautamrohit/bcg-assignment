@@ -12,7 +12,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 
-function Header() {
+function Header({ selectedStack }) {
   const [age, setAge] = React.useState("");
 
   const handleChange = (event) => {
@@ -37,9 +37,13 @@ function Header() {
         </div>
 
         <div className="flex items-center justify-start gap-2">
-          <p className="text-sm">Stack Id:</p> <p> 12345678909 </p>
+          <p className="text-sm">Stack Id:</p> <p> {selectedStack?.stackId} </p>
           <span>
-            <CalendarViewWeekIcon />
+            <CalendarViewWeekIcon
+              sx={{
+                color: "cyan",
+              }}
+            />
           </span>
         </div>
 
