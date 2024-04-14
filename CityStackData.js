@@ -1,8 +1,9 @@
 import { getRandomConsumptionValue } from "./Utils/generateData";
+import { uuid } from "uuidv4";
 
 export const CityStackData = [
   {
-    stackId: "stack_1",
+    stackId: uuid(),
     stackType: "backlog",
     displayName: "General Stack 1",
     quaterWiseData: {
@@ -106,7 +107,7 @@ export const CityStackData = [
     },
   },
   {
-    stackId: "stack_2",
+    stackId: uuid(),
     stackType: "backlog",
     displayName: "General Stack 2",
     quaterWiseData: {
@@ -210,7 +211,7 @@ export const CityStackData = [
     },
   },
   {
-    stackId: "stack_3",
+    stackId: uuid(),
     stackType: "backlog",
     displayName: "General Stack 3",
     quaterWiseData: {
@@ -314,7 +315,7 @@ export const CityStackData = [
     },
   },
   {
-    stackId: "stack_4",
+    stackId: uuid(),
     stackType: "backlog",
     displayName: "General Stack 4",
     quaterWiseData: {
@@ -418,7 +419,7 @@ export const CityStackData = [
     },
   },
   {
-    stackId: "stack_5",
+    stackId: uuid(),
     stackType: "backlog",
     displayName: "General Stack 5",
     quaterWiseData: {
