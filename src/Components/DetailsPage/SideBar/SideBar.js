@@ -47,7 +47,7 @@ function a11yProps(index) {
   };
 }
 
-export default function SideBar() {
+export default function SideBar({ selectedStack, setSelectedStack }) {
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
@@ -61,6 +61,12 @@ export default function SideBar() {
     (item) => item?.stackType === "pending"
   );
   let finalData = CityStackData?.filter((item) => item?.stackType === "final");
+
+  const styles = {
+    tab: {
+      color: "#fff",
+    },
+  };
 
   return (
     <Box
@@ -81,23 +87,17 @@ export default function SideBar() {
           <Tab
             label={`Backlog (${backLogData?.length})`}
             {...a11yProps(0)}
-            sx={{
-              color: "#fff",
-            }}
+            sx={styles.tab}
           />
           <Tab
             label={`Pending (${pendingData?.length})`}
             {...a11yProps(1)}
-            sx={{
-              color: "#fff",
-            }}
+            sx={styles.tab}
           />
           <Tab
             label={`Final Sign-Off (${finalData?.length})`}
             {...a11yProps(2)}
-            sx={{
-              color: "#fff",
-            }}
+            sx={styles.tab}
           />
         </Tabs>
       </Box>

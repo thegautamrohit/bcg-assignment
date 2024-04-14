@@ -149,7 +149,10 @@ export default function Layout() {
               />
             </IconButton>
           </DrawerHeader>
-          <SideBar />
+          <SideBar
+            setSelectedStack={setSelectedStack}
+            selectedStack={selectedStack}
+          />
           <Divider />
         </Drawer>
         <Main
