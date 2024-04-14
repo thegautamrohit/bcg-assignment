@@ -42,7 +42,7 @@ export const data = {
   datasets: [
     {
       label: "Dataset 1",
-      data: [100, 120, 90, 140, 150, 110, 160],
+      data: [100, 120, 90, 140, 150],
       borderColor: "rgb(255, 99, 132)",
       backgroundColor: "rgba(255, 99, 132, 0.5)",
       segment: {
@@ -52,7 +52,7 @@ export const data = {
     },
     {
       label: "Dataset 2",
-      data: [120, 110, 70, 130, 110, 170, 60],
+      data: [120, 110, 70, 130, 110],
       borderColor: "rgb(53, 162, 235)",
       backgroundColor: "rgba(53, 162, 235, 0.5)",
     },

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, Tooltip } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
@@ -21,25 +21,27 @@ const Map = ({ cities, onCityClick }) => {
   };
 
   return (
-    <MapContainer
-      center={[0, 0]}
-      zoom={3}
-      style={{ height: "100vh", width: "100%" }}
-      ref={mapRef}
-    >
-      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+    <div className="m-h-[90vh]">
+      <MapContainer
+        center={[0, 0]}
+        zoom={3}
+        style={{ height: "100vh", width: "100%" }}
+        ref={mapRef}
+      >
+        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-      {cities.map((city) => (
-        <Marker
-          key={city.id}
-          position={[city.lat, city.lng]}
-          // onClick={() => handleCityClick(city)}
-          // icon={icon}
-        >
-          <Popup>{city.name}</Popup>
-        </Marker>
-      ))}
-    </MapContainer>
+        {cities.map((city) => (
+          <Marker
+            key={city.id}
+            position={[city.lat, city.lng]}
+            // onClick={() => handleCityClick(city)}
+            // icon={icon}
+          >
+            <Tooltip>{city.name}</Tooltip>
+          </Marker>
+        ))}
+      </MapContainer>
+    </div>
   );
 };
 

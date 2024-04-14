@@ -11,7 +11,7 @@ import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
 export default function Header() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{ backgroundColor: "#082f41" }}>
+      <AppBar position="fixed" style={{ backgroundColor: "#082f41" }}>
         <Toolbar>
           <IconButton
             size="large"

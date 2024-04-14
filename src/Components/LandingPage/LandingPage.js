@@ -38,15 +38,13 @@ function LandingPage() {
   };
 
   return (
-    <div>
+    <div className="relative">
       <Header />
       <Map cities={cities} onCityClick={handleCityClick} />
-      {selectedCity && (
-        <div className="city-widget-container">
-          <CityWidget city={selectedCity} />
-          <h1>TEST</h1>
-        </div>
-      )}
+      <div className="text-white absolute left-10 top-32 z-[1000] text-3xl font-bold">
+        <h4>Hello User,</h4>
+      </div>
+      <CityWidget />
     </div>
   );
 }
