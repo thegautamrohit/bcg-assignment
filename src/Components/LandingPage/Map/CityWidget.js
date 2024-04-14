@@ -24,11 +24,11 @@ ChartJS.register(
   Tooltip
 );
 
-const CityWidget = ({ city }) => {
+const CityWidget = () => {
   return (
     <div
-      id="city_widget_container"
-      className="absolute bottom-10 left-10 z-[1000] flex items-center justify-start gap-8"
+      id="city__widget__container"
+      className="absolute bottom-10 left-10 z-[1000] flex items-center justify-start gap-8 city__widget__container"
     >
       {CityWidgetData?.map((city, index) => (
         <Link
@@ -39,8 +39,8 @@ const CityWidget = ({ city }) => {
             borderImage: "linear-gradient(blue, cyan) 30",
             borderWidth: "2px",
             borderStyle: "solid",
-            // boxShadow: "1px 0.5px 2px #e7e7e7",
             backgroundColor: "rgba(255,255,255,0.05)",
+            boxShadow: "1px 0.5px 2px #e7e7e7",
           }}
         >
           <CityCard city={city} />
