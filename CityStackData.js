@@ -1,6 +1,6 @@
 import { getRandomConsumptionValue } from "./Utils/generateData";
 
-export const cityStackData = [
+export const CityStackData = [
   {
     stackId: "stack_1",
     stackType: "backlog",
