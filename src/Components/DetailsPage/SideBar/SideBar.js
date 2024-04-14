@@ -110,7 +110,12 @@ export default function SideBar({ selectedStack, setSelectedStack }) {
         <List sx={{ width: "100%", maxWidth: 420, padding: 0 }}>
           {backLogData?.length > 0 ? (
             backLogData?.map((item, index) => (
-              <MonoList key={item.id} data={item} />
+              <MonoList
+                key={item.id}
+                data={item}
+                selectedStack={selectedStack}
+                setSelectedStack={setSelectedStack}
+              />
             ))
           ) : (
             <p className="text-white text-lg my-5 text-center">
@@ -145,9 +150,14 @@ export default function SideBar({ selectedStack, setSelectedStack }) {
   );
 }
 
-function MonoList({ data }) {
+function MonoList({ data, selectedStack, setSelectedStack }) {
   return (
-    <ListItem sx={{ width: "100%", padding: 0 }}>
+    <ListItem
+      sx={{ width: "100%", padding: 0 }}
+      onClick={() => {
+        setSelectedStack(data);
+      }}
+    >
       <div className="flex flex-col justify-center gap-1 border-b border-white pb-6 pt-2 cursor-pointer">
         <div className="flex items-center justify-center gap-2">
           <Checkbox
@@ -158,6 +168,7 @@ function MonoList({ data }) {
                 color: "#00FFFF",
               },
             }}
+            checked={data?.stackId === selectedStack?.stackId}
           />
           <div className="flex items-center justify-center gap-2 p-2">
             <button className="flex items-center justify-center bg-slate-300 rounded-sm text-black font-semibold text-sm p-1">
