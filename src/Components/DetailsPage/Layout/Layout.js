@@ -114,7 +114,11 @@ export default function Layout() {
           anchor="left"
           open={open}
         >
-          <DrawerHeader>
+          <DrawerHeader
+            style={{
+              backgroundColor: "#082f41",
+            }}
+          >
             <p>STACK SAMPLE</p>
             <IconButton onClick={handleDrawerClose}>
               {theme.direction === "ltr" ? (

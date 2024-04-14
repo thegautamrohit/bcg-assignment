@@ -35,14 +35,14 @@ export const options = {
 
 const labels = ["January", "February", "March", "April", "May", "June", "July"];
 
-const dash = (ctx, value) => (ctx?.p0DataIndex < 5 ? value : [6, 0]);
+const dash = (ctx, value) => (ctx?.p0DataIndex > 5 ? [6, 0] : value);
 
 export const data = {
   labels,
   datasets: [
     {
       label: "Dataset 1",
-      data: [100, 120, 90, 140, 150],
+      data: [100, 120, 90, 140, 150, 70, 80, 90, 80, 68, 47, 79, 58],
       borderColor: "rgb(255, 99, 132)",
       backgroundColor: "rgba(255, 99, 132, 0.5)",
       segment: {

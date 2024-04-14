@@ -1,4 +1,4 @@
-import { randomArray } from "./Utils/randomArray";
+import { randomArray } from "./Utils/generateData";
 
 export const CityWidgetData = [
   {

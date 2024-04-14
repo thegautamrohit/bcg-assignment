@@ -1,5 +1,3 @@
-// theme.js
-
 import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
@@ -8,7 +6,7 @@ const theme = createTheme({
       main: "#13262f", // Customize primary color
     },
     secondary: {
-      main: "#f50057", // Customize secondary color
+      main: "#00FFFF", // Customize secondary color
     },
     // Add custom colors as needed
     customColor: {
@@ -16,6 +14,9 @@ const theme = createTheme({
     },
     bgColor: {
       main: "#020a12",
+    },
+    tabColor: {
+      main: "#fff",
     },
   },
 });

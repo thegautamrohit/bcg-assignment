@@ -55,7 +55,9 @@ export default function SideBar() {
         <Tabs
           value={value}
           onChange={handleChange}
-          aria-label="basic tabs example"
+          aria-label="secondary tabs example"
+          textColor="secondary"
+          indicatorColor="secondary"
         >
           <Tab label="Backlog" {...a11yProps(0)} />
           <Tab label="Pending" {...a11yProps(1)} />
