@@ -130,7 +130,7 @@ const ChartComponent = ({ sanitisedData }) => {
   };
 
   return (
-    <div className="max-h-[56vh] ml-6 w-max">
+    <div className="max-h-[96vh] ml-6">
       {sanitisedData?.aiForecastHistoric && (
         <Line options={options} data={data} />
       )}
