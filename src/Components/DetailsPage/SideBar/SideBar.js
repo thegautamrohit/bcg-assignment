@@ -179,7 +179,7 @@ function MonoList({ data, selectedStack, setSelectedStack }) {
                   height: "20px",
                 }}
               />
-              F'CAST STAB.
+              F&apos;CAST STAB.
             </button>
             <button className="flex items-center justify-center bg-slate-300 rounded-sm text-black font-semibold text-sm p-1">
               <NorthIcon
@@ -188,7 +188,7 @@ function MonoList({ data, selectedStack, setSelectedStack }) {
                   height: "20px",
                 }}
               />
-              F'CAST ACC.
+              F&apos;CAST ACC.
             </button>
           </div>
           <MailOutlineIcon
