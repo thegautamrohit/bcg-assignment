@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { CityWidgetData } from "../../../../CityWidgetData";
 import {
   Chart as ChartJS,
@@ -24,13 +24,64 @@ ChartJS.register(
   Tooltip
 );
 
-const CityWidget = () => {
+const CityWidget = ({ position }) => {
+  const [styles, setStyles] = useState({});
+
+  useEffect(() => {
+    let tempPos = {};
+
+    if (position === "top") {
+      tempPos = {
+        top: 200,
+        left: 10,
+        width: "95vw",
+      };
+    }
+
+    if (position === "bottom") {
+      tempPos = {
+        bottom: 10,
+        left: 10,
+        width: "95vw",
+      };
+    }
+
+    if (position === "left") {
+      tempPos = {
+        top: 200,
+        left: 10,
+        height: "75vh",
+      };
+    }
+
+    if (position === "right") {
+      tempPos = {
+        top: 200,
+        right: 10,
+        height: "75vh",
+      };
+    }
+
+    setStyles(tempPos);
+  }, [position]);
+
   return (
     <div
       id="city__widget__container"
-      className="absolute bottom-10 left-10 z-[1000] w-[95vw] city__widget__container"
+      className="absolute z-[1000] city__widget__container"
+      style={{
+        ...styles,
+      }}
     >
-      <div className=" flex items-center justify-start gap-8  overflow-x-scroll">
+      <div
+        className="flex items-center justify-start gap-8 h-full"
+        style={{
+          overflowX: (position === "top" || position === "bottom") && "scroll",
+          overflowY: (position === "left" || position === "right") && "scroll",
+          flexDirection:
+            position === "top" || position === "bottom" ? "row" : "column",
+        }}
+      >
         {CityWidgetData?.map((city, index) => (
           <Link
             href="/details"
