@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -53,8 +53,15 @@ export default function Layout() {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
   const [selectedStack, setSelectedStack] = useState(CityStackData[0]);
+  const [width, setWidth] = useState();
 
   const router = useRouter();
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setWidth(window.innerWidth);
+    }
+  }, []);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -117,7 +124,7 @@ export default function Layout() {
               boxSizing: "border-box",
             },
           }}
-          variant="persistent"
+          variant={width <= 1024 ? null : "persistent"}
           anchor="left"
           open={open}
         >
@@ -155,14 +162,25 @@ export default function Layout() {
           />
           <Divider />
         </Drawer>
-        <Main
-          open={open}
-          style={{
-            padding: 0,
-          }}
-        >
-          <HeroComponent selectedStack={selectedStack} />
-        </Main>
+
+        {width > 1024 ? (
+          <>
+            <Main
+              open={open}
+              style={{
+                padding: 0,
+              }}
+            >
+              <HeroComponent selectedStack={selectedStack} />
+            </Main>
+          </>
+        ) : (
+          <>
+            <Box>
+              <HeroComponent selectedStack={selectedStack} />
+            </Box>
+          </>
+        )}
       </Box>
     </>
   );

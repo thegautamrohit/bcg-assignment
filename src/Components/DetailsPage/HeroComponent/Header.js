@@ -20,10 +20,10 @@ function Header({ selectedStack }) {
   };
 
   return (
-    <div className="text-white flex flex-col gap-2 w-full ">
+    <div className="text-white flex flex-col gap-2 w-[99vw] ">
       <div
         id="upper_nav"
-        className="flex items-end justify-start gap-40 bg-[#082f41] py-4 px-5 "
+        className="flex items-end justify-start gap-[5%] bg-[#082f41] py-4 px-5 "
       >
         <div className="flex items-center justify-start gap-4">
           <span>
@@ -37,7 +37,8 @@ function Header({ selectedStack }) {
         </div>
 
         <div className="flex items-center justify-start gap-2">
-          <p className="text-sm">Stack Id:</p> <p> {selectedStack?.stackId} </p>
+          <p className="text-sm">Stack Id:</p>{" "}
+          <p> {selectedStack?.stackId.substring(0, 15)} </p>
           <span>
             <CalendarViewWeekIcon
               sx={{
