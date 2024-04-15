@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
 import CalendarViewWeekIcon from "@mui/icons-material/CalendarViewWeek";
 import EmojiFlagsIcon from "@mui/icons-material/EmojiFlags";
@@ -13,11 +13,7 @@ import Select from "@mui/material/Select";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 
 function Header({ selectedStack }) {
-  const [age, setAge] = React.useState("");
-
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
+  const [sample, setSample] = useState();
 
   return (
     <div className="text-white flex flex-col gap-2 w-[99vw] ">
@@ -37,7 +33,7 @@ function Header({ selectedStack }) {
         </div>
 
         <div className="flex items-center justify-start gap-2">
-          <p className="text-sm">Stack Id:</p>{" "}
+          <p className="text-sm font-semibold">Stack Id:</p>{" "}
           <p> {selectedStack?.stackId.substring(0, 15)} </p>
           <span>
             <CalendarViewWeekIcon
@@ -116,9 +112,11 @@ function Header({ selectedStack }) {
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                value={age}
+                value={sample}
                 label="Latest Issue"
-                onChange={handleChange}
+                onChange={(e) => {
+                  setSample(e.target.value);
+                }}
                 sx={{
                   color: "#fff",
                   // border: "1px solid #082f41",
