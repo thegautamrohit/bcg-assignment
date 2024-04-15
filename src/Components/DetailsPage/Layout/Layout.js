@@ -92,8 +92,10 @@ export default function Layout() {
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1 }}
-          ></Typography>
+            sx={{ flexGrow: 1, color: "#fff" }}
+          >
+            Details
+          </Typography>
 
           <div>
             <IconButton
