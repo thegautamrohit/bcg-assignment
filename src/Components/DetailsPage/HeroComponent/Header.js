@@ -50,11 +50,11 @@ function Header({ selectedStack }) {
         >
           <div className="flex flex-col gap-2 items-center">
             <p className="text-slate-300">FORECAST</p>
-            <h6 className="font-bold">89%</h6>
+            <h6 className="font-bold">{selectedStack?.percent?.val1}%</h6>
           </div>
           <div className="flex flex-col gap-2 items-center">
             <p className="text-slate-300">FORECAST</p>
-            <h6 className="font-bold">80%</h6>
+            <h6 className="font-bold">{selectedStack?.percent?.val2}%</h6>
           </div>
           <div></div>
         </div>

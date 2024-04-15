@@ -6,6 +6,10 @@ export const CityStackData = [
     stackId: uuid(),
     stackType: "backlog",
     displayName: "General Stack 1",
+    percent: {
+      val1: 84,
+      val2: 87,
+    },
     quaterWiseData: {
       // will have quaters number as indexed
       2022: [
@@ -164,6 +168,10 @@ export const CityStackData = [
     stackId: uuid(),
     stackType: "backlog",
     displayName: "General Stack 2",
+    percent: {
+      val1: 72,
+      val2: 65,
+    },
     quaterWiseData: {
       // will have quaters number as indexed
       2022: [
@@ -322,6 +330,10 @@ export const CityStackData = [
     stackId: uuid(),
     stackType: "backlog",
     displayName: "General Stack 3",
+    percent: {
+      val1: 92,
+      val2: 78,
+    },
     quaterWiseData: {
       // will have quaters number as indexed
       2022: [
@@ -480,6 +492,10 @@ export const CityStackData = [
     stackId: uuid(),
     stackType: "backlog",
     displayName: "General Stack 4",
+    percent: {
+      val1: 83,
+      val2: 89,
+    },
     quaterWiseData: {
       // will have quaters number as indexed
       2022: [
@@ -638,6 +654,10 @@ export const CityStackData = [
     stackId: uuid(),
     stackType: "backlog",
     displayName: "General Stack 5",
+    percent: {
+      val1: 73,
+      val2: 54,
+    },
     quaterWiseData: {
       // will have quaters number as indexed
       2022: [
@@ -796,6 +816,10 @@ export const CityStackData = [
     stackId: uuid(),
     stackType: "backlog",
     displayName: "General Stack 6",
+    percent: {
+      val1: 65,
+      val2: 87,
+    },
     quaterWiseData: {
       // will have quaters number as indexed
       2022: [
