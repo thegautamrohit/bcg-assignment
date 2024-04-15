@@ -71,4 +71,32 @@ export const CityWidgetData = [
       value: "65%",
     },
   },
+  {
+    id: "city_6",
+    name: "City 6",
+    graph1: {
+      plotting1: randomArray(50, 100, 7),
+      plotting2: randomArray(50, 100, 7),
+      value: "45.7M",
+    },
+    graph2: {
+      plotting1: randomArray(50, 100, 7),
+      plotting2: randomArray(50, 100, 7),
+      value: "65%",
+    },
+  },
+  {
+    id: "city_7",
+    name: "City 7",
+    graph1: {
+      plotting1: randomArray(50, 100, 7),
+      plotting2: randomArray(50, 100, 7),
+      value: "45.7M",
+    },
+    graph2: {
+      plotting1: randomArray(50, 100, 7),
+      plotting2: randomArray(50, 100, 7),
+      value: "65%",
+    },
+  },
 ];

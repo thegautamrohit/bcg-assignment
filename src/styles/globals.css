@@ -49,6 +49,28 @@ body {
   animation-duration: 3s;
   animation-delay: 1s;
   animation-fill-mode: forwards;
+  padding: 10px;
+}
+
+/* width */
+.city__widget__container > div::-webkit-scrollbar {
+  width: 6px;
+  height: 8px;
+}
+
+/* Track */
+.city__widget__container > div::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.city__widget__container > div::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.city__widget__container > div::-webkit-scrollbar-thumb:hover {
+  background: #666565;
 }
 
 @keyframes shownum {

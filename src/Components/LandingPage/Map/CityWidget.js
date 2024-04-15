@@ -28,24 +28,26 @@ const CityWidget = () => {
   return (
     <div
       id="city__widget__container"
-      className="absolute bottom-10 left-10 z-[1000] flex items-center justify-start gap-8 city__widget__container"
+      className="absolute bottom-10 left-10 z-[1000] w-[95vw] city__widget__container"
     >
-      {CityWidgetData?.map((city, index) => (
-        <Link
-          href="/details"
-          key={city.id}
-          className="border border-white rounded-md"
-          style={{
-            borderImage: "linear-gradient(blue, cyan) 30",
-            borderWidth: "2px",
-            borderStyle: "solid",
-            backgroundColor: "rgb(21, 53, 66, 0.7)",
-            boxShadow: "1px 0.5px 2px #e7e7e7",
-          }}
-        >
-          <CityCard city={city} />
-        </Link>
-      ))}
+      <div className=" flex items-center justify-start gap-8  overflow-x-scroll">
+        {CityWidgetData?.map((city, index) => (
+          <Link
+            href="/details"
+            key={city.id}
+            className="border border-white rounded-md"
+            style={{
+              borderImage: "linear-gradient(blue, cyan) 30",
+              borderWidth: "2px",
+              borderStyle: "solid",
+              backgroundColor: "rgb(21, 53, 66, 0.7)",
+              boxShadow: "1px 0.5px 2px #e7e7e7",
+            }}
+          >
+            <CityCard city={city} />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };
