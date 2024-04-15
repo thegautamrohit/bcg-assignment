@@ -40,7 +40,7 @@ body {
 .leaflet-control-container {
   position: absolute;
   right: 56px;
-  bottom: 200px;
+  top: 100px;
 }
 
 .city__widget__container {
