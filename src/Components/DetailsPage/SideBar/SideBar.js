@@ -74,6 +74,7 @@ export default function SideBar({ selectedStack, setSelectedStack }) {
         width: "100%",
         backgroundColor: "#082f41",
         color: "#fff",
+        height: "100%",
       }}
     >
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
