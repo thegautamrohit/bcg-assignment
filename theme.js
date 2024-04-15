@@ -19,6 +19,33 @@ const theme = createTheme({
       main: "#fff",
     },
   },
+
+  components: {
+    MuiSwitch: {
+      styleOverrides: {
+        switchBase: {
+          // Controls default (unchecked) color for the thumb
+          color: "#ccc",
+        },
+        colorPrimary: {
+          "&.Mui-checked": {
+            // Controls checked color for the thumb
+            color: "#2284fd3d",
+          },
+        },
+        track: {
+          // Controls default (unchecked) color for the track
+          opacity: 0.2,
+          backgroundColor: "#fff",
+          ".Mui-checked.Mui-checked + &": {
+            // Controls checked color for the track
+            opacity: 0.7,
+            backgroundColor: "#2284fd3d",
+          },
+        },
+      },
+    },
+  },
 });
 
 export default theme;

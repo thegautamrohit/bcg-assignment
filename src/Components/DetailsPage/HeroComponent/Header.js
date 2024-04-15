@@ -89,28 +89,62 @@ function Header({ selectedStack }) {
         </div>
       </div>
 
-      <div className="lower_nav">
+      <div
+        id="lower_nav"
+        className="flex items-center justify-start  gap-[3%] px-8 py-4 mb-4"
+      >
         <div>
           <p>Forecast Horizon</p>
         </div>
 
         <div>
           <Box sx={{ minWidth: 120 }}>
-            <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">Age</InputLabel>
+            <FormControl
+              sx={{
+                color: "#fff",
+                width: 150,
+              }}
+            >
+              <InputLabel
+                id="demo-simple-select-label"
+                sx={{
+                  color: "#fff",
+                }}
+              >
+                Latest Issue
+              </InputLabel>
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 value={age}
-                label="Age"
+                label="Latest Issue"
                 onChange={handleChange}
+                sx={{
+                  color: "#fff",
+                  // border: "1px solid #082f41",
+                }}
               >
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
+                <MenuItem value={10}>Sample 1</MenuItem>
+                <MenuItem value={20}>Sample 2</MenuItem>
               </Select>
             </FormControl>
           </Box>
+        </div>
+        <div className="flex items-center justify-center gap-2">
+          <InfoOutlinedIcon
+            sx={{
+              color: "cyan",
+            }}
+          />
+          <span className="flex h-[30px] w-[1px] ml-4 bg-gray-600"></span>
+        </div>
+        <div className="flex items-center justify-center">
+          <Switch
+            sx={{
+              color: "#fff",
+            }}
+          />
+          <p className="text-sm">SHOW CONFIDENTIAL INTERVAL</p>
         </div>
       </div>
     </div>
