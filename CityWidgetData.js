@@ -21,12 +21,12 @@ export const CityWidgetData = [
     graph1: {
       plotting1: randomArray(50, 100, 7),
       plotting2: randomArray(50, 100, 7),
-      value: "45.7M",
+      value: "25.5M",
     },
     graph2: {
       plotting1: randomArray(50, 100, 7),
       plotting2: randomArray(50, 100, 7),
-      value: "65%",
+      value: "84%",
     },
   },
   {
@@ -35,12 +35,12 @@ export const CityWidgetData = [
     graph1: {
       plotting1: randomArray(50, 100, 7),
       plotting2: randomArray(50, 100, 7),
-      value: "45.7M",
+      value: "23M",
     },
     graph2: {
       plotting1: randomArray(50, 100, 7),
       plotting2: randomArray(50, 100, 7),
-      value: "65%",
+      value: "85%",
     },
   },
   {
@@ -49,12 +49,12 @@ export const CityWidgetData = [
     graph1: {
       plotting1: randomArray(50, 100, 7),
       plotting2: randomArray(50, 100, 7),
-      value: "45.7M",
+      value: "49.7M",
     },
     graph2: {
       plotting1: randomArray(50, 100, 7),
       plotting2: randomArray(50, 100, 7),
-      value: "65%",
+      value: "48%",
     },
   },
   {
@@ -63,12 +63,12 @@ export const CityWidgetData = [
     graph1: {
       plotting1: randomArray(50, 100, 7),
       plotting2: randomArray(50, 100, 7),
-      value: "45.7M",
+      value: "73.7M",
     },
     graph2: {
       plotting1: randomArray(50, 100, 7),
       plotting2: randomArray(50, 100, 7),
-      value: "65%",
+      value: "93%",
     },
   },
   {
@@ -77,12 +77,12 @@ export const CityWidgetData = [
     graph1: {
       plotting1: randomArray(50, 100, 7),
       plotting2: randomArray(50, 100, 7),
-      value: "45.7M",
+      value: "57.9M",
     },
     graph2: {
       plotting1: randomArray(50, 100, 7),
       plotting2: randomArray(50, 100, 7),
-      value: "65%",
+      value: "61%",
     },
   },
   {

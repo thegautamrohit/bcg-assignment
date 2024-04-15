@@ -13,7 +13,7 @@ import {
 import { Line } from "react-chartjs-2";
 import ArrowUpwardOutlinedIcon from "@mui/icons-material/ArrowUpwardOutlined";
 import ArrowDownwardOutlinedIcon from "@mui/icons-material/ArrowDownwardOutlined";
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 ChartJS.register(
   CategoryScale,
@@ -26,6 +26,8 @@ ChartJS.register(
 
 const CityWidget = ({ position }) => {
   const [styles, setStyles] = useState({});
+
+  const router = useRouter();
 
   useEffect(() => {
     let tempPos = {};
@@ -83,10 +85,10 @@ const CityWidget = ({ position }) => {
         }}
       >
         {CityWidgetData?.map((city, index) => (
-          <Link
-            href="/details"
+          <div
+            onClick={() => router.push("/details")}
             key={city.id}
-            className="border border-white rounded-md"
+            className="border border-white rounded-md cursor-pointer"
             style={{
               borderImage: "linear-gradient(blue, cyan) 30",
               borderWidth: "2px",
@@ -96,7 +98,7 @@ const CityWidget = ({ position }) => {
             }}
           >
             <CityCard city={city} />
-          </Link>
+          </div>
         ))}
       </div>
     </div>
@@ -186,17 +188,6 @@ function Chart({ cityInfo }) {
       legends: {
         display: false,
       },
-    },
-    tooltips: {
-      callbacks: {
-        label: function (tooltipItem) {
-          return tooltipItem.yLabel;
-        },
-      },
-    },
-
-    labels: {
-      display: false,
     },
 
     scales: {
