@@ -1,5 +1,12 @@
-import React, { useEffect, useRef } from "react";
-import { MapContainer, TileLayer, Marker, Popup, Tooltip } from "react-leaflet";
+import React from "react";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  Tooltip,
+  useMap,
+} from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
@@ -33,25 +40,19 @@ const cities = [
 ];
 
 const Map = () => {
-  const mapRef = useRef(null);
-
   return (
     <div className="m-h-[90vh]">
       <MapContainer
         center={[0, 0]}
         zoom={3}
         style={{ height: "100vh", width: "100%" }}
-        ref={mapRef}
+        // ref={mapRef}
       >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+        <MapHelper />
 
         {cities.map((city) => (
-          <Marker
-            key={city.id}
-            position={[city.lat, city.lng]}
-            // onClick={() => handleCityClick(city)}
-            // icon={icon}
-          >
+          <Marker key={city.id} position={[city.lat, city.lng]}>
             <Tooltip>
               <div>
                 <p>City: {city?.name}</p>
@@ -67,3 +68,9 @@ const Map = () => {
 };
 
 export default Map;
+
+function MapHelper() {
+  const map = useMap();
+  map.flyTo([20.5937, 78.9629], 4);
+  return null;
+}

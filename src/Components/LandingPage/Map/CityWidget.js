@@ -39,7 +39,7 @@ const CityWidget = () => {
             borderImage: "linear-gradient(blue, cyan) 30",
             borderWidth: "2px",
             borderStyle: "solid",
-            backgroundColor: "rgba(255,255,255,0.05)",
+            backgroundColor: "rgb(21, 53, 66, 0.7)",
             boxShadow: "1px 0.5px 2px #e7e7e7",
           }}
         >

@@ -21,7 +21,8 @@ ChartJS.register(
   Legend
 );
 
-export const options = {
+const options = {
+  layout: {},
   responsive: true,
   title: {
     display: true,
