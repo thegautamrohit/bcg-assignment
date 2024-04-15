@@ -10,6 +10,11 @@ import {
 } from "@mui/material";
 
 const styles = {
+  table: {
+    minWidth: 650,
+    display: "block",
+    overflowX: "auto",
+  },
   tableCell: {
     width: 150,
     padding: "16px",
@@ -24,9 +29,12 @@ function TableComponent({ sanitisedData }) {
       component={Paper}
       sx={{
         backgroundColor: "#082f41",
+        width: "100%",
+        display: "table",
+        tableLayout: "fixed",
       }}
     >
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table sx={styles.table} aria-label="simple table">
         <TableHead></TableHead>
         {sanitisedData?.aiForecast && (
           <TableBody>
