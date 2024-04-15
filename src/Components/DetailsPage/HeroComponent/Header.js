@@ -147,6 +147,11 @@ function Header({ selectedStack }) {
           <p className="text-sm">SHOW CONFIDENTIAL INTERVAL</p>
         </div>
       </div>
+
+      <div className="flex items-center justify-between gap-[5%] ml-48 w-1/3 mb-2">
+        <p>HISTORICAL</p>
+        <p className="text-cyan-300">FORECAST</p>
+      </div>
     </div>
   );
 }
