@@ -25,10 +25,10 @@ Project Deployed on [https://bcg-assignment-2eku.vercel.app/] : Home Page
 
 ## Project Overview
 
-Component Library Used: Material UI
-Design Library Used: Tailwind CSS
-Chart made using: Chartjs
-Map made using : React Leaflet
+Component Library Used: Material UI ||
+Design Library Used: Tailwind CSS ||
+Chart made using: Chartjs ||
+Map made using : React Leaflet ||
 
-City Widget Data: contained in CityWidgetData.js
-Detailed Stack Data: contained in CityStackData.js
+City Widget Data: contained in CityWidgetData.js ||
+Detailed Stack Data: contained in CityStackData.js ||
