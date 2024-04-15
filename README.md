@@ -17,3 +17,18 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+
+## Project Link
+
+Project Deployed on [https://bcg-assignment-2eku.vercel.app/] : Home Page
+[https://bcg-assignment-2eku.vercel.app/details] : Details Page
+
+## Project Overview
+
+Component Library Used: Material UI
+Design Library Used: Tailwind CSS
+Chart made using: Chartjs
+Map made using : React Leaflet
+
+City Widget Data: contained in CityWidgetData.js
+Detailed Stack Data: contained in CityStackData.js
