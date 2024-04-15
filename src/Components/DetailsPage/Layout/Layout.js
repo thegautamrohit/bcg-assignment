@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { styled, useTheme } from "@mui/material/styles";
+import React, { useState } from "react";
+import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import HeroComponent from "../HeroComponent/HeroComponent";
 import SideBar from "../SideBar/SideBar";
 import AppBar from "@mui/material/AppBar";
@@ -50,18 +48,10 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 }));
 
 export default function Layout() {
-  const theme = useTheme();
   const [open, setOpen] = useState(false);
   const [selectedStack, setSelectedStack] = useState(CityStackData[0]);
-  const [width, setWidth] = useState();
 
   const router = useRouter();
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setWidth(window.innerWidth);
-    }
-  }, []);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -114,6 +104,7 @@ export default function Layout() {
           </div>
         </Toolbar>
       </AppBar>
+
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
 
@@ -126,7 +117,7 @@ export default function Layout() {
               boxSizing: "border-box",
             },
           }}
-          variant={width <= 1024 ? null : "persistent"}
+          variant="persistent"
           anchor="left"
           open={open}
         >
@@ -165,24 +156,15 @@ export default function Layout() {
           <Divider />
         </Drawer>
 
-        {width > 1024 ? (
-          <>
-            <Main
-              open={open}
-              style={{
-                padding: 0,
-              }}
-            >
-              <HeroComponent selectedStack={selectedStack} />
-            </Main>
-          </>
-        ) : (
-          <>
-            <Box>
-              <HeroComponent selectedStack={selectedStack} />
-            </Box>
-          </>
-        )}
+        <Main
+          open={open}
+          style={{
+            padding: 0,
+            overflowX: "scroll",
+          }}
+        >
+          <HeroComponent selectedStack={selectedStack} />
+        </Main>
       </Box>
     </>
   );
