@@ -5,6 +5,20 @@ import Table from "./Table";
 
 function HeroComponent({ selectedStack }) {
   const [sanitisedData, setSanitisedData] = useState({});
+  const [tableData, setTableData] = useState([]);
+
+  function mergeData(arr1, arr2) {
+    // function to merge two array of frecasted and historic values
+    let res = arr1.map((value, index) => {
+      if (value === null && arr2[index] !== null) {
+        return arr2[index];
+      } else {
+        return value;
+      }
+    });
+
+    return res;
+  }
 
   useEffect(() => {
     const { quaterWiseData } = selectedStack;
@@ -32,14 +46,30 @@ function HeroComponent({ selectedStack }) {
       });
     }
 
+    let tempTableData = {
+      aiForecast: mergeData(
+        [...result.aiForecastHistoric],
+        [...result.aiForecast]
+      ),
+      finalForecast: mergeData(
+        [...result.finalForecastHistoric],
+        [...result.finalForecast]
+      ),
+      consumption: mergeData(
+        [...result.finalConsumption],
+        [...result.finalConsumptionPrevious]
+      ),
+    };
+
     setSanitisedData(result);
+    setTableData(tempTableData);
   }, [selectedStack]);
 
   return (
     <div>
       <Header selectedStack={selectedStack} />
       <ChartComponent sanitisedData={sanitisedData} />
-      <Table sanitisedData={sanitisedData} />
+      <Table tableData={tableData} />
     </div>
   );
 }

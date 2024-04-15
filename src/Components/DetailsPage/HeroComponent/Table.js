@@ -23,7 +23,7 @@ const styles = {
   },
 };
 
-function TableComponent({ sanitisedData }) {
+function TableComponent({ tableData }) {
   return (
     <TableContainer
       component={Paper}
@@ -36,53 +36,29 @@ function TableComponent({ sanitisedData }) {
     >
       <Table sx={styles.table} aria-label="simple table">
         <TableHead></TableHead>
-        {sanitisedData?.aiForecast && (
+        {tableData?.aiForecast && (
           <TableBody>
             <TableRow>
               <TableCell sx={styles.tableCell}>AI Forecast</TableCell>
-              {sanitisedData?.aiForecastHistoric.map((item, index) => (
+              {tableData?.aiForecast.map((item, index) => (
                 <TableCell sx={styles.tableCell} key={index}>
                   {item}
                 </TableCell>
               ))}
             </TableRow>
+
             <TableRow>
               <TableCell sx={styles.tableCell}>Final Forecast</TableCell>
-              {sanitisedData?.finalForecastHistoric.map((item, index) => (
+              {tableData?.finalForecast.map((item, index) => (
                 <TableCell sx={styles.tableCell} key={index}>
                   {item}
                 </TableCell>
               ))}
             </TableRow>
+
             <TableRow>
               <TableCell sx={styles.tableCell}>Final Consumption</TableCell>
-              {sanitisedData.finalConsumption.map((item, index) => (
-                <TableCell sx={styles.tableCell} key={index}>
-                  {item}
-                </TableCell>
-              ))}
-            </TableRow>
-            <TableRow>
-              <TableCell sx={styles.tableCell}>Ai Forecast</TableCell>
-              {sanitisedData.aiForecast.map((item, index) => (
-                <TableCell sx={styles.tableCell} key={index}>
-                  {item}
-                </TableCell>
-              ))}
-            </TableRow>
-            <TableRow>
-              <TableCell sx={styles.tableCell}>Final Forecast</TableCell>
-              {sanitisedData.aiForecast.map((item, index) => (
-                <TableCell sx={styles.tableCell} key={index}>
-                  {item}
-                </TableCell>
-              ))}
-            </TableRow>
-            <TableRow>
-              <TableCell sx={styles.tableCell}>
-                Previous Year Consumption
-              </TableCell>
-              {sanitisedData.finalConsumptionPrevious.map((item, index) => (
+              {tableData.consumption.map((item, index) => (
                 <TableCell sx={styles.tableCell} key={index}>
                   {item}
                 </TableCell>
